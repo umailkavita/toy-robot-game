@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Toy_Robot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-HQ-WTg">
+                                <rect key="frame" x="20" y="64" width="374" height="374"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4lZ-HQ-WTg" secondAttribute="height" multiplier="1:1" id="c7P-QV-Mev"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1IZ-pZ-p9Q">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kaH-SI-MkM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uUm-pB-OzZ"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-Se-geJ" customClass="PrimaryButton" customModule="Toy_Robot" customModuleProvider="target">
+                                <rect key="frame" x="132" y="533" width="150" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="250" constant="150" id="wS8-P0-7o0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Move Forward">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveForwardWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2tB-1b-qjV"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRs-za-7Lt">
+                                <rect key="frame" x="0.0" y="468" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIg-HT-iHD" customClass="PrimaryButton" customModule="Toy_Robot" customModuleProvider="target">
+                                        <rect key="frame" x="217" y="7" width="177" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Rotate right" image="rotate-right">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="turnRightWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t3Y-SB-w00"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQb-CF-nuq" customClass="PrimaryButton" customModule="Toy_Robot" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="7" width="177" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Rotate left" image="rotate-left">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="turnLeftWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ESX-Y0-UZd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SIg-HT-iHD" firstAttribute="width" secondItem="nQb-CF-nuq" secondAttribute="width" id="197-mE-DoO"/>
+                                    <constraint firstItem="nQb-CF-nuq" firstAttribute="centerY" secondItem="ZRs-za-7Lt" secondAttribute="centerY" id="2ng-xI-mEe"/>
+                                    <constraint firstItem="SIg-HT-iHD" firstAttribute="centerY" secondItem="ZRs-za-7Lt" secondAttribute="centerY" id="Akd-RB-Emk"/>
+                                    <constraint firstAttribute="trailing" secondItem="SIg-HT-iHD" secondAttribute="trailing" constant="20" id="DEI-ul-kDU"/>
+                                    <constraint firstItem="SIg-HT-iHD" firstAttribute="leading" secondItem="nQb-CF-nuq" secondAttribute="trailing" constant="20" id="Kqt-x2-tLE"/>
+                                    <constraint firstItem="nQb-CF-nuq" firstAttribute="leading" secondItem="ZRs-za-7Lt" secondAttribute="leading" constant="20" id="LLV-b4-5p5"/>
+                                    <constraint firstAttribute="height" constant="50" id="okk-ue-hAW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byI-4E-t4Z">
+                                <rect key="frame" x="0.0" y="579" width="414" height="283"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9d-I7-Acq" customClass="PrimaryButton" customModule="Toy_Robot" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="126" width="177" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Report">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="reportAlertWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="75s-t2-bkU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK9-7p-WxE" customClass="PrimaryButton" customModule="Toy_Robot" customModuleProvider="target">
+                                        <rect key="frame" x="217" y="126" width="177" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetToyRobotGameWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqD-GZ-dLI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="y9d-I7-Acq" firstAttribute="leading" secondItem="byI-4E-t4Z" secondAttribute="leading" constant="20" id="HIN-kc-Odf"/>
+                                    <constraint firstItem="y9d-I7-Acq" firstAttribute="centerY" secondItem="byI-4E-t4Z" secondAttribute="centerY" id="O9x-TX-4ZF"/>
+                                    <constraint firstItem="IK9-7p-WxE" firstAttribute="width" secondItem="y9d-I7-Acq" secondAttribute="width" id="V54-Xh-naR"/>
+                                    <constraint firstItem="IK9-7p-WxE" firstAttribute="leading" secondItem="y9d-I7-Acq" secondAttribute="trailing" constant="20" id="pd0-19-feU"/>
+                                    <constraint firstItem="IK9-7p-WxE" firstAttribute="centerY" secondItem="byI-4E-t4Z" secondAttribute="centerY" id="q97-bq-PwN"/>
+                                    <constraint firstAttribute="trailing" secondItem="IK9-7p-WxE" secondAttribute="trailing" constant="20" id="ybD-J3-s9n"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu6-41-N3E" customClass="PrimaryButton" customModule="Toy_Robot" customModuleProvider="target">
+                                <rect key="frame" x="132" y="235.5" width="150" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="250" constant="150" id="c43-jV-FeJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Place the robot">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="placeRobotWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t5b-F8-8fp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZRs-za-7Lt" firstAttribute="top" secondItem="4lZ-HQ-WTg" secondAttribute="bottom" constant="30" id="0uE-3b-KTO"/>
+                            <constraint firstItem="byI-4E-t4Z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9jf-Qq-Skp"/>
+                            <constraint firstItem="byI-4E-t4Z" firstAttribute="top" secondItem="WNN-Se-geJ" secondAttribute="bottom" constant="15" id="DDa-b2-gtx"/>
+                            <constraint firstItem="byI-4E-t4Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jmm-hd-dop"/>
+                            <constraint firstItem="ZRs-za-7Lt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NqG-wH-1kL"/>
+                            <constraint firstItem="WNN-Se-geJ" firstAttribute="top" secondItem="ZRs-za-7Lt" secondAttribute="bottom" constant="15" id="O30-Ey-Eel"/>
+                            <constraint firstItem="4lZ-HQ-WTg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="QB4-4Y-ghn"/>
+                            <constraint firstItem="Zu6-41-N3E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Shy-zu-dY0"/>
+                            <constraint firstItem="4lZ-HQ-WTg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="W5V-OP-3pZ"/>
+                            <constraint firstItem="WNN-Se-geJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZGV-6N-x0H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4lZ-HQ-WTg" secondAttribute="trailing" constant="20" id="flf-sU-FA6"/>
+                            <constraint firstItem="Zu6-41-N3E" firstAttribute="centerX" secondItem="4lZ-HQ-WTg" secondAttribute="centerX" id="iY4-Sw-loP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZRs-za-7Lt" secondAttribute="trailing" id="ilH-c7-cI2"/>
+                            <constraint firstItem="4lZ-HQ-WTg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lZr-hZ-FuG"/>
+                            <constraint firstItem="Zu6-41-N3E" firstAttribute="centerY" secondItem="4lZ-HQ-WTg" secondAttribute="centerY" id="pC3-37-816"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="byI-4E-t4Z" secondAttribute="bottom" id="wZE-b5-ROG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="collectionView" destination="4lZ-HQ-WTg" id="Bwc-t8-3JR"/>
+                        <outlet property="moveForwardButton" destination="WNN-Se-geJ" id="h1V-1E-VOQ"/>
+                        <outlet property="placeButton" destination="Zu6-41-N3E" id="Egd-y7-wHp"/>
+                        <outlet property="reportButton" destination="y9d-I7-Acq" id="qky-sZ-C9d"/>
+                        <outlet property="rotateLeftButton" destination="nQb-CF-nuq" id="nhi-5b-V9b"/>
+                        <outlet property="rotateRightButton" destination="SIg-HT-iHD" id="0Dc-DS-e8r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323.1884057971015" y="-250.44642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rotate-left" width="20" height="26"/>
+        <image name="rotate-right" width="20" height="26"/>
+    </resources>
+</document>
