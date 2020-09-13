@@ -1,5 +1,7 @@
 # toy-robot-game
 
+![iPhone screenshot](https://github.com/umailkavita/toy-robot-game/blob/master/git_iphone_screenshot.png?raw=true)
+
 ## Description
 
 - This is an iOS application of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.
@@ -15,6 +17,7 @@
 - REPORT : Reports the current location of the robot and its faceing direction eg.(x,y,F).
 
 ## Architecture
+
 The project is written in Swift 5, using Xcode 11.4.1. It runs on both iPad and iPhone, on portrait mode only.
 
 ## Instructions
