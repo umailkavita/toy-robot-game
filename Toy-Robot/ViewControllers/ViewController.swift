@@ -180,7 +180,7 @@ extension ViewController {
         return String(format: "Output: %d,%d,%@", arguments: [positionX,positionY,facingTo])
     }
     @IBAction func reportAlert(sender: UIButton) {
-        guard let report = reportRobotPosition() else {
+        guard let report = self.reportRobotPosition() else {
             // The indexpath is not set, the robot is probably not yet set on the table
             return
         }

@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EBEA5903250CC4C3001E3B74 /* PBXContainerItemProxy */ = {
+		5A62F9FC250E4BE40025EBCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5ABAEA79250B3F8D005BFA82 /* Project object */;
 			proxyType = 1;
@@ -163,7 +163,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EBEA5904250CC4C3001E3B74 /* PBXTargetDependency */,
+				5A62F9FD250E4BE40025EBCB /* PBXTargetDependency */,
 			);
 			name = "Toy-RobotTests";
 			productName = "Toy-RobotTests";
@@ -253,10 +253,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EBEA5904250CC4C3001E3B74 /* PBXTargetDependency */ = {
+		5A62F9FD250E4BE40025EBCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5ABAEA80250B3F8D005BFA82 /* Toy-Robot */;
-			targetProxy = EBEA5903250CC4C3001E3B74 /* PBXContainerItemProxy */;
+			targetProxy = 5A62F9FC250E4BE40025EBCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -398,8 +398,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NTBETZ2D35;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Toy-Robot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -407,6 +407,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kavi.Toy-Robot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,8 +417,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NTBETZ2D35;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Toy-Robot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,6 +426,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kavi.Toy-Robot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
